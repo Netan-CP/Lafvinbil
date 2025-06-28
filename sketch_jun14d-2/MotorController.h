@@ -1,10 +1,11 @@
 // Motor
+#include <string.h>
 
 class MotorController{
 
 private:
 
-  float Speed = .1;
+  float Speed = .3;
 
   int* M_LF;
   int* M_LB;
@@ -13,11 +14,11 @@ private:
   int* M_LS;
   int* M_RS;
 
-  int PWMtime = 10;
+  int PWMtime = 50;
   int PWMLastTime = millis();
   bool PWMState = false;
 
-  char CurrentAction = "S";
+  char* CurrentAction = "S";
   int ActionLength = 1000;
   int ActionStartTime = 0;
 
@@ -42,6 +43,6 @@ public:
 
   void RunMotors();
 
-  char getCurrentAction(){ return CurrentAction; }
+  char* getCurrentAction(){ return CurrentAction; }
     
 };

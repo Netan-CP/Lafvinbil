@@ -27,7 +27,6 @@ void MotorController::Stop(){
   digitalWrite(M_LB, LOW);
   digitalWrite(M_RF, LOW);
   digitalWrite(M_RB, LOW);
-  delay(250);
 }
 
 void MotorController::Forward(){
